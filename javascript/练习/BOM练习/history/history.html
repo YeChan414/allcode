@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            //返回历史访问页面数
+            //alert(history.length);
+
+            //返回
+            var btn1 = document.getElementById("btn1");
+            btn1.onclick=function(){
+                history.back();
+            }
+            
+            //前进
+            var btn2 = document.getElementById("btn2");
+            btn2.onclick=function(){
+                history.forward();
+            }
+
+            //跳转
+            //需要传入一个参数 整数向前跳转，负数向后跳转
+            var btn3 = document.getElementById("btn3");
+            btn3.onclick=function(){
+                //向前跳2个
+                history.go(2);
+                //向后跳2个
+                //history.go(-2);
+            }
+
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>history</h1>
+    <a href="./test1.html">去test1页面</a>
+    <a href="./test2.html">去test2页面</a>
+    </br></br> 
+    <button id="btn1">返回</button>
+    <button id="btn2">前进</button>
+    <button id="btn3">跳转</button>
+</body>
+</html>

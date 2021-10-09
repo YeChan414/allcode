@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            /* 设置背景颜色 */
+            background-color: #bfa;
+
+            /* 设置背景图片 
+                一定要加url
+                如果图片长宽大于div长宽，则会被裁剪
+                小于的话，则会平铺*/
+            background-image: url("./img/1.png");
+
+            /* 设置背景图片重复方式 
+                可选值：repeat (默认) xy都重复
+                        repeat-x  x重复
+                        repaet-y  y重复
+                        no-repeat  不重复*/
+            background-repeat: no-repeat;
+
+            /* 设置背景图片位置
+                用top bottom center left right组成具体位置定位
+                也可以用水平偏移量和竖直偏移量来定位 */
+
+            /*background-position: left center;*/
+            background-position: 100px 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

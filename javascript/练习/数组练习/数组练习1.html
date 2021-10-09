@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //找出数组中年龄大于18的
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        //修改原型函数的toString方法，让输出结果按照格式来
+        Person.prototype.toString = function(){
+            return "Person[name="+this.name+","+"age="+this.age+"]";
+        }
+        
+        var per=new Person("孙悟空",19);
+        var per1=new Person("猪八戒",19);
+        var per2=new Person("红孩儿",9);
+        var per3=new Person("二郎神",39);
+        var per4=new Person("小龙女",10);
+        var perArr=[per,per1,per2,per3,per4];
+        
+        function getAdult(arr){
+        //用一个新数组存放年龄大于18的人，先置为空
+        var newArr = [];
+        for(var i=0;i<arr.length;i++)
+            {
+                //用一个变量装perArr的每一个元素
+                var p=perArr[i];
+                if(p.age>18)
+                newArr.push(p);  //将p存入数组
+            }
+        return newArr;
+        }
+        var result=getAdult(perArr);
+        document.write(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

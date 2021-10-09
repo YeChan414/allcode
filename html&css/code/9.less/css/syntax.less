@@ -1,0 +1,27 @@
+//less中的单行注释，不会被解析到css
+/* css中的注释，会被解析到css */
+
+//变量，用@+变量名来实现
+@a:100px;
+
+.box1{
+    width:@a;
+}
+
+@b:blue;
+
+.box2{
+    background-color:@b;
+}
+//变量也可以用来做类名或者属性名，不过用的时候得给变量名加{}
+@c:box3;
+
+.@{c}{
+    width:@a;
+}
+
+div{
+    color:green;
+    background-color: $color;  //用于和前面同样的时候，加一个$
+}
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            /*
+            width和height都设置的是内容区的属性
+            */
+
+            width: 300px;
+            height: 300px;
+            background-color: #bfa;
+
+            /*
+            边框有三个属性：边框宽度(border-width)，边框颜色(border-color)，边框样式(border-style)
+            */
+
+            border-color: slateblue;
+            border-style: double;
+            border-width: 10px;
+        } 
+    </style>
+</head>
+<body>
+    <!-- 
+        -css将页面中的所有元素都设置成了盒子的模型
+        -每个盒子模型由下面几个元素组成：
+            内容区(content)
+            内边距(padding)
+            边框(border)
+            外边距(margin)
+     -->
+    <div class="box"></div>
+</body>
+</html>

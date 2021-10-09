@@ -1,0 +1,14 @@
+/* css中的注释，会被解析到css */
+.box1 {
+  width: 100px;
+}
+.box2 {
+  background-color: blue;
+}
+.box3 {
+  width: 100px;
+}
+div {
+  color: green;
+  background-color: green;
+}

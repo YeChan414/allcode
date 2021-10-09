@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            height:100px;
+            width:100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var box1=document.getElementById("box1");
+            box1.onmousedown=function(e){
+                //鼠标.client - 元素.offset  这样可以让鼠标在元素内部，否则鼠标一直在元素左上角
+                var ol = e.clientX - box1.offsetLeft;
+                var ot = e.clientY - box1.offsetTop;
+
+                document.onmousemove=function(event){
+                    //兼容性
+                    event = event || window.event;
+                    var left = event.clientX - ol;
+                    var top = event.clientY - ot;
+
+                    box1.style.left=left+"px";
+                    box1.style.top = top +"px";
+                }
+                document.onmouseup=function(){
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+            }      
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+</html>

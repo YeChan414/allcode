@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*创建对象*/
+        var obj=new Object();
+
+        /*给对象添加属性*/
+        obj.name="孙悟空";
+        obj.sex="男";
+        obj.age=18;
+        //创建方法
+        obj.sayName=function(){
+            document.write(obj.name);
+        }
+
+        /*删除对象的某个属性*/
+        delete obj.sex;
+
+        /*用in检查某个对象里面是否含有某个属性*/
+        document.write("sex"in obj);  //已经删除了，结果应该是false
+        obj.sayName();  //方法调用
+        console.log(obj);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

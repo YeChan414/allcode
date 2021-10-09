@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var btn = document.getElementById("btn");
+            btn.onclick=function(){
+                //如果直接让location等于一个完整的url，则会跳转
+                //location="https://www.baidu.com/";
+
+                //assign()用于跳转界面
+                location.assign("https://www.baidu.com/")
+
+                //reload()用于重新加载页面，如果传入true，则会强制清空缓存
+                location.reload();
+
+                //replace()用于用一个新的界面替换当前页面
+                location.replace("https://www.baidu.com/");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">按钮</button>
+</body>
+</html>

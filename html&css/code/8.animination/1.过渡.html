@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过渡</title>
+    <style>
+        .box1{
+            width:1000px;
+            height:600px;
+            background-color:silver;
+        }
+        .box2{
+            width:100px;
+            height:100px;
+            margin-left:0;
+            background-color: #bfa;
+            /* transition-property指定要过渡的属性，all代表全部，也可以设置多个用逗号隔开 */
+            transition-property: all;
+
+            /* transition-duration指定过渡时间 */
+            transition-duration: 2s;
+
+            /* transition-timing-function指定过渡时序函数
+                可选值： ease 默认值，先加速后减速
+                        linear 匀速
+                        ease-in 加速
+                        ease-out 减速
+                        ease-in-out 先加速后减速
+                        steps(x) 把整个过程分为x步 */
+            transition-timing-function: ease;
+
+            /* transition-delay指定延时，等待几秒之后再开始 */
+            transition-delay: 0s;
+        }
+        .box3{
+            width:100px;
+            margin-top:100px;
+            height:100px;
+            background-color: blueviolet;
+            transition:all 2s;
+        }
+        .box1:hover .box2{
+            margin-left: 900px;
+        }
+        .box1:hover .box3{
+            height:200px;
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

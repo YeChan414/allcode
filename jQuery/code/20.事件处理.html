@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <style>
+        .q{
+            width:150px;
+            height:20px;
+            padding:2px;
+            background-color: cornflowerblue;
+            text-align: center;
+        }
+        .a{
+            display: none;
+            width:150px;
+            font-size: 10px;
+            height:225px;
+            border:1px solid black;
+        }
+    </style>
+    <script>
+        $(function(){
+            $(".q").click(function(){
+                //利用is()方法，判断某个指定的jQuery对象是否符合某个选择器
+                var flag = $(".a").is(":hidden");
+                if(flag){
+                    $(".a").show();
+                }
+                else{
+                    $(".a").hide();
+                }
+            })
+
+            //bind:为某指定的jQuery对象绑定事件
+            $(".q").bind("click",function(){
+                var flag = $(".a").is(":hidden");
+                if(flag){
+                    $(".a").show();
+                }
+                else{
+                    $(".a").hide();
+                }
+            })
+
+            //hover:鼠标移上去执行第一个函数，移出去执行第二个函数
+            $(".q").hover(function(){
+                $(".a").show();
+            },function(){
+                $(".a").hide();
+            })
+
+            //toggle():鼠标点击一下执行第一个函数，点击第二下执行第二个函数，以此类推，后面要是没有就回到最开始继续
+            $(".q").toggle(function(){
+                $(".a").show();
+            },function(){
+                $(".a").hide();
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="q">什么是jQuery？
+        <div class="a">jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（框架）于2006年1月由John Resig发布。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。</div>
+    </div>
+</body>
+</html>

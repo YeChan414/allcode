@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //用数组字面量创建数组，语法：[]
+        var arr=[10,2,3];
+        document.write(arr[0]);
+
+        //数组中的元素可以是任何数据类型
+        arr = ["hello",1,null];
+        document.write("</br>"+arr[2]);
+
+        //数组中的元素也可以是一个对象
+        var obj={name:"孙悟空"};
+        arr[arr.length]=obj;
+        document.write("</br>"+arr[3].name);
+
+        //数组中的元素也可以是一个函数
+        arr = [function(){alert(1),function(){alert(2)}}]
+        arr[0]();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

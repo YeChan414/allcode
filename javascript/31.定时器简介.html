@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+
+            var count = document.getElementById("count");
+            var num = 1;
+            //setInterval可以用来设置定时器，要有一个标识，传入参数：1.一个函数  2.每次调用的时间，单位为毫秒
+            var timer = setInterval(function(){
+                count.innerHTML = num++;
+
+                if(num==11)  //到10就停止
+                //clearInterval()用于关闭定时器
+                clearInterval(timer);
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="count">0</h1>
+</body>
+</html>

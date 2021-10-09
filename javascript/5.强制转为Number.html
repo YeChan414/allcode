@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				方法一：调用Number()函数
+					对于String-->  1.如果是纯数字的字符串，就转换成数字
+								  2.如果是非数字的字符串，则转换为NaN
+								  3.如果是空字符串或者全是空格的，则转换成0
+					对于boolean-->  如果是true就转成1，false就是0
+					对于null-->  转为0
+					对于undefined-->  转为NaN
+				方法二：
+					parseInt()将字符串转为整数
+					parseFloat()将字符串转为小数*/
+			var a = "123";
+			a = Number(a);
+
+			var a = "";
+			a = Number(a);
+
+			var a = null;
+			a = Number(a);
+
+			var a = undefined;
+			a = Number(a);
+
+			var a = "123a456";
+			a = parseInt(a);
+
+			var a = "123.456";
+			a = parseFloat(a);
+
+			//parseInt()中可以传入第二个参数来指定转为几进制
+			var a = "060";
+			a = parseInt(a,8);
+
+			console.log(typeof a);
+			console.log(a);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

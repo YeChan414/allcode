@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width:200px;
+            height:200px;
+            background-color: orange;
+            /* 浮动可以实现文字环绕图片 */
+            /* 浮动就是让元素脱离文档流，可以在同一行，浮动元素不会超出父类的范围
+               浮动的元素会按照界面大小自动排序，如果第一行容纳不下，就会自动换到第二行 */
+            /* 三个div都设置浮动，就会在同一行，不会被挡住 */
+            float: left;
+        }
+        .box2{
+            width:200px;
+            height:200px;
+            background-color: #bfa;
+            float: left;
+        }
+        .box3{
+            width:200px;
+            height:200px;
+            background-color: rebeccapurple;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

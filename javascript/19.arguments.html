@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            document.write(arguments.length);  //返回实参个数，传入了3个实参，值为3
+            document.write("</br>"+arguments[0]);  //可以看作数组
+            document.write("</br>"+arguments.callee);   //返回正在执行的函数
+        }
+        fun(2,3,4);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

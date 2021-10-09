@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //删除数组中重复的元素
+        var arr=[1,2,3,2,2,4,5,1,6,3];
+
+        for(var i=0;i<arr.length;i++)
+        {
+            for(var j=i+1;j<arr.length;j++){
+                if(arr[j]==arr[i]){
+                    arr.splice(j,1);  //从j开始删除1个
+                    //删除后数组会自动往前移动，补足空白，导致这个已经比较过的位置不会再比较
+                    //所以让倒退一个，然后外层j++再前进一个，等于还在原地比较一次
+                    j--;
+                }
+            }
+        }
+        var result=arr;
+        document.write(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

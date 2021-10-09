@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高</title>
+    <style>
+        div{
+            font-size:50px;
+            /* 行高指的是文字占有的实际高度
+                可以通过line-height来设置行高
+                行高可以为整数，意思是当前字体大小的多少倍
+                行高会在字体框上下均匀分配空间
+                可以通过让行高等于高度，让文字垂直居中
+
+                字体框就是字体实际存在的格子，要比行高大，font-size设置的就是字体框的大小*/
+            border:rebeccapurple 1px solid;
+            height:100px;
+            line-height:100px;
+        }
+    </style>
+</head>
+<body>
+    <div>今天天气真好，Hello</div>
+</body>
+</html>

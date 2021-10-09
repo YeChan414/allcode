@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            //1.为文本框添加得到焦点focus和失去焦点blur响应函数
+            $(":text").focus(function(){
+                //2.当获取焦点时，若文本框中是默认值defaultValue，就将其置为空""
+                var val = $(this).val();
+                if(val == this.defaultValue){
+                    $(this).val("");
+                }
+            })
+            $(":text").blur(function(){
+                //3.当失去焦点时，文本框内去除空格后为空""，则将其置为默认值
+                var val = $(this).val();
+                if($.trim(val) == ""){
+                    this.value = this.defaultValue;
+                }
+            })
+
+            $(":button:eq(1)").click(function(){
+                $("#single").val("选项3")
+            })
+            $(":button:eq(2)").click(function(){
+                $("#multiple").val(["选项3","选项5"]);
+            })
+            $(":button:eq(3)").click(function(){
+                $(":radio[name='r']").val(["radio3"]);  //单选框val也要用数组
+            })
+            $(":button:eq(4)").click(function(){
+                $(":checkbox[name='c']").val(["check1","check4"]);
+            })
+            $(":button:eq(5)").click(function(){
+                alert($("#single").val());
+                alert($("#multiple").val());
+
+                //val不能直接获取单选框和多选框被选择的值
+                alert($(":radio[name='r']:checked").val());
+                alert($(":checkbox[name='c']:checked").val());
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" value="请输入邮箱"><br><br>
+    <input type="text" value="请输入密码"><br><br>
+    <input type="button" value="登录"><br><br>
+
+    <select name="" id="single">
+        <option value="选项1">选项1</option>
+        <option value="选项2">选项2</option>
+        <option value="选项3">选项3</option>
+    </select><br><br>
+
+    <select name="" id="multiple" style="height:120px;">
+        <option value="选项1" selected="selected">选项1</option>
+        <option value="选项2">选项2</option>
+        <option value="选项3">选项3</option>
+        <option value="选项4">选项4</option>
+        <option value="选项5">选项5</option>
+    </select><br><br>
+
+    <input type="radio" name="r" value="radio1"/>选项1
+    <input type="radio" name="r" value="radio2"/>选项2
+    <input type="radio" name="r" value="radio3"/>选项3
+    <br><br>
+
+    <input type="checkbox" name="c" value="check1"/>选项1
+    <input type="checkbox" name="c" value="check2"/>选项2
+    <input type="checkbox" name="c" value="check3"/>选项3
+    <input type="checkbox" name="c" value="check4"/>选项4
+    <input type="checkbox" name="c" value="check5"/>选项5
+
+    <br><br>
+    <button>让单选下拉框选择选项3</button>&nbsp;
+    <button>让多选下拉框选择选项3和5</button>&nbsp;
+    <button>让单选框选择选项3</button>&nbsp;
+    <button>让多选框选择选项1和4</button>&nbsp;
+    <button>打印已经被选中的内容</button>
+</body>
+</html>

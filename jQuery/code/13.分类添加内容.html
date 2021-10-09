@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            //点击submit，检查是否选择type，若没有选择给出提示
+                //检测文本框中是否输入内容（可以去掉文字前后的空格），若没有输入给出提示
+                    //若检查都通过，则在ul中添加li
+
+            //使包含新增的li都可以点击显示文本
+            function show(li){
+                alert($(li).text());
+            }
+
+            $("li").click(function(){
+                show(this);
+            })
+
+            $(":submit").click(function(){
+                var $type = $(":radio[name='type']:checked");
+                if($type.length == 0){
+                    alert("请选择类型！");
+                    return false;
+                }
+
+                var type = $type.val();
+
+                var $name = $(":text[name='name']");
+                var context = $name.val();
+
+                //去除内容前后的空格
+                context = $.trim(context);
+                //将去掉空格的内容传给$name
+                $name.val(context);
+
+                if(context == ""){
+                    alert("请输入内容！");
+                    return false;
+                }
+
+                $("<li>" + context +"</li>").appendTo($("#" + type )).click(function(){
+                    show(this);
+                });
+                
+                return false;
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+<p>你最喜欢那个城市？</p>
+<ul id="city">
+    <li >北京</li>
+    <li>天津</li>
+    <li id="sh">上海</li>
+</ul>
+<ul id="game">
+    <li>红警</li>
+    <li>飞车</li>
+    <li id="wzry">王者荣耀</li>
+</ul>
+<form action="">
+    <input type="radio" name="type" value="city"/>城市
+    <input type="radio" name="type" value="game"/>游戏
+    <br><br>
+    name:&nbsp;<input type="text" name="name">
+    <input type="submit" name="submit" id="submit">
+</form>
+
+</html>

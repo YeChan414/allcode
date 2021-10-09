@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 这种在标签内部使用的叫做结构和行为耦合，不推荐使用 -->
+    <!--   <button id="btn" onclick="alert('你点我干嘛')">我是一个按钮</button>  -->
+    <button id="btn">我是一个按钮</button>
+    <script>
+        /*事件就是用户和浏览器之间的交互行为
+            比如：点击按钮、鼠标移动、关闭窗口等
+        */
+
+        /*可以对按钮的对应事件绑定处理函数*/
+        var btn = document.getElementById("btn");
+
+        //给btn对象添加方法，触发后执行
+        btn.onclick=function(){
+            alert("你点我干嘛");
+        };
+    </script>
+</body>
+</html>

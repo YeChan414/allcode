@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        .red{
+            color: red;
+        }
+
+        /*将class为red的div大小设置成30px*/
+        /*交集选择器
+            作用：选中同时满足多个条件的元素
+            语法：选择器1选择器2{}
+            注意：交集选择器中如果有元素选择器，必须先写元素选择器
+        */
+        div.red
+        {
+            font-size: 30px;
+        }
+
+        /*并集选择器
+            作用：同时选中多个选择器对应元素
+            语法：选择器1，选择器2{}
+        */
+        h2,span{
+            color:chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">我是div</div>
+    <p class="red">我是p元素</p>
+    <h2>我是h2</h2>
+    <span>我是span</span>
+    <img src="" alt="">
+</body>
+</html>

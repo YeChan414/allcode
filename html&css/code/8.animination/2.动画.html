@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        .box1{
+            width:1000px;
+            height:600px;
+            background-color:silver;
+        }
+        .box2{
+            width:100px;
+            height:100px;
+            margin-left:0;
+            background-color: #bfa;
+            /* 设置动画 */
+            animation: test 3s alternate infinite;  /* alternate是到了末尾之后再返回 */
+        }
+        /* 设置关键帧，语法：@keyframes+名字 */
+        @keyframes test {
+            from{
+                background-color: red;
+                margin-left:0;
+            }
+            to{
+                background-color: purple;
+                margin-left:900px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

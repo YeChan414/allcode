@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            /* 变量，相当于宏定义 */
+            --color:#bfa;
+            --length:100px;
+        }
+        
+        .box1{
+            width: var(--length);  /* 使用变量 */
+            height:100px;
+            background-color: var(--color);
+        }
+        .box2{
+            width: calc(200px/2);  /* calc是计算函数 */
+            height:100px;
+            color: #bfa;
+        }
+        .box3
+        {
+            width: 100px;
+            height:100px;
+            border:10px solid #bfa;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">aaaa</div>
+    <div class="box2">aaaa</div>
+    <div class="box3">aaaa</div>
+</body>
+</html>

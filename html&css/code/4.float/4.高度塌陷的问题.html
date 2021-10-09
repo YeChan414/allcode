@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高度塌陷的问题</title>
+    <style>
+        .outer{
+            border:10px red solid;
+            overflow: hidden;
+        }
+        .inner{
+            width:100px;
+            height:100px;
+            background-color: #bfa;
+            /* 高度塌陷是指，当内部块元素开启浮动之后，外部块元素不会被撑开，会影响页面的布局
+                解决方法：BFC:给外部块元素设置overflow:hidden*/
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div style="width:100px;height:100px;background-color: yellow;"></div>
+</body>
+</html>

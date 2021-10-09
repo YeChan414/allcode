@@ -1,0 +1,60 @@
+.box1{
+    width:100px;
+    height:100px;
+    > .box2{
+        width:100px;
+    }
+
+    &:hover{
+        color:cornflowerblue;
+    }   //&表示的是父元素
+}
+
+.p1{
+    width:100px;
+    height:100px;
+}
+.p2:extend(.p1){   //extend用于给当前选择器扩展指定选择器的样式
+    color:red;
+}
+
+.p3(){  //给选择器后面加一个括号，表示mixins，专门用来给别的选择器引用
+    width:200px;
+    color:cornflowerblue;
+}
+
+.p4{
+    .p3();  //p4调用p3
+}
+
+//混合函数
+.test(@w,@h,@color)
+{
+    width:@w;
+    height:@h;
+    background-color: @color;
+}
+
+.test2(@w:100px,@h:100px,@color:#bfa)  //设置默认值，调用时就可以不用传值
+{
+    width:@w;
+    height:@h;
+    background-color: @color;
+}
+
+.diaoyong{
+    .test(100px,200px,cornflowerblue);  //调用时传入参数
+    .test2(300px);
+}
+html{
+    width:100%;
+    height:100%;
+  }
+body{
+    background-color:average(blue,purple);   //取平均色
+    width:100%;
+    height:100%;
+}
+body:hover{
+    background-color: darken(average(blue,purple),10%);  //颜色调深10%
+}

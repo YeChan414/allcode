@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /*
+        [属性名]：选择所有具有该属性的元素
+        [属性名=属性值]：选择所有含有该属性名和属性值的元素*/
+        p[title]
+        {
+            color: orangered;
+        }
+        p[title=qwe]
+        {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 加一个title，每当鼠标移动到这行文字时，就会在旁边显示具体的title值 -->
+    <p title="abc">落霞与孤鹜齐飞</p>
+    <p title="qwe">秋水共长天一色</p>
+    <p title="yui">今天天气真好</p>
+    <p>css好难</p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面的布局</title>
+    <style>
+        /* 利用并集选择器将头部主体和尾部的相同代码合并起来 */
+        header,main,footer{
+            width:1000px;
+            margin:0 auto;
+        }
+        header{
+            /*width:1000px;*/
+            height:150px;
+            background-color: silver;
+            /*margin:0 auto;*/  /* 上下外边距为0，左右居中 */
+        }
+        main{
+            /*width:1000px;*/
+            height:400px;
+            background-color: #bfa;
+            margin:5px auto;
+            /*margin:0 auto;*/
+        }
+        nav,article,aside{
+            height:400px;
+            float:left;
+        }
+        nav{
+            width:200px;
+            background-color: orange;
+        }
+        article{
+            width:590px;
+            background-color: slateblue;
+            margin:0 5px;
+        }
+        aside{
+            width:200px;
+            background-color: pink;
+        }
+        footer{
+            /*width:1000px;*/
+            height:150px;
+            background-color: tomato;
+            /*margin:0 auto;*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 设置头部 -->
+    <header>
+    </header>
+
+    <!-- 设置主体 -->
+    <main>
+        <!-- 设置一个侧边栏 -->
+            <nav>
+
+            </nav>
+        <!-- 设置一个文章区域 -->
+            <article>
+
+            </article>
+        <!-- 设置一个右边栏 -->
+            <aside>
+
+            </aside>
+    </main>
+
+    <!-- 设置尾部 -->
+    <footer>
+    </footer>
+</body>
+</html>

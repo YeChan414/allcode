@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左侧导航栏</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* 设置导航栏 */
+        .left-nav{
+            width:190px;
+            height:450px;
+            padding:10px 0;
+        }
+
+        /* 设置item */
+        .left-nav item{
+            height:25px;
+            /* 要让一个文字在父元素中垂直居中，只需要将父元素的line-height设置为和父元素的height一样即可*/
+            line-height: 25px;
+            /* 设置item的右内边距，将文字往里移动但仍保持hover时选中整个item框*/
+            padding-left:18px;
+            /* 因为斜线没有标签，所以在这里设置斜线的大小 */
+            font-size:12px;
+        }
+
+        /* 设置移到item上面变色 */
+        .item:hover{
+            background-color: #d9d9d9;
+        }
+
+        /* 设置文字超链接样式 */
+        .item a{
+            /* 设置字体大小 */
+            font-size:14px;
+            /* 设置字体颜色 */
+            color:#333;
+            /* 去除下划线 */
+            text-decoration: none;
+        }
+        .item a:hover{
+            color:#c81623;
+        };
+    </style>
+</head>
+<body>
+    <nav class="left-nav">
+        <div class="item">
+            <a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="">家用电器</a>/<a href="">家用电器</a>/<a href="">家用电器</a>
+        </div>
+    </nav>
+</body>
+</html>

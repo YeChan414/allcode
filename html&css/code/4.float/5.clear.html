@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clear</title>
+    <style>
+        div{
+            font-size:50px;
+            text-align: center;
+        }
+        .box1,.box3{
+            width:100px;
+            height:100px;
+            line-height:100px;
+        }
+        .box1{
+            background-color: pink;
+            float: left;
+        }
+        .box2{
+            width:200px;
+            height:200px;
+            background-color: yellow;
+            line-height: 200px;
+            float:right;
+        }
+        .box3{
+            background-color: #bfa;
+            /* 由于box1浮动，导致box3上移，如果不希望box3受到其他元素浮动的影响，可以使用clear
+            
+               clear作用：清除浮动元素对当前元素的影响
+               可选值：left：消除左侧浮动影响
+                      right：消除右侧浮动影响
+                      both：消除两侧中最大的浮动影响*/
+                      clear:both;
+                      
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //用字面量创建正则表达式
+        //语法：/正则表达式/匹配模式
+        var reg=/ab/i;
+
+        var str="ab";
+        var result=reg.test(str);
+        document.write(result);
+
+        //检查是否有a或者b
+        reg=/a|b/;  //或者reg=/[ab]/    []里面的内容也是或的关系/;     
+
+        //检查是否包含26个英文字母中的某些
+        reg = /[a-z]/i;  //[a-z]表示a或b或c或...或z    或者直接使用[A-z]表示随便大小写
+
+        //检查是否有abc或adc或aec
+        reg = /a[bde]c/;
+
+        //除了  [^ ]
+        reg =/[^ab]/;  //除了ab
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

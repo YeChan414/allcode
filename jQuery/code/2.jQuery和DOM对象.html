@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                //1.jQuery对象转为DOM对象
+
+                    //1)获取一个jQuery对象
+                    var $btn = $("button");
+
+                    //2)jQuery对象是一个数组
+                        //alert($btn.length);
+
+                    //3)通过数组下标转为DOM对象
+                    alert($btn[0].firstChild.nodeValue);
+
+                //2.DOM对象转为jQuery对象
+
+                    //1)获取一个DOM对象
+                    var btn = document.getElementById("btn");
+
+                    //2)用$()进行转换
+                    alert("结果:"+$(btn).text());
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn">ClickMe</button>
+    <br><br>
+    <button>ClickMe2</button>
+</body>
+</html>

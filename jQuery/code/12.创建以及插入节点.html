@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            //创建li节点    并将其插入到city内部的最后
+            $("<li id='sx'>陕西</li>").appendTo($("#city"));
+            //或者
+            //$("#city").append($("<li id='sx'>陕西</li>"));
+
+            //创建li节点    并将其插入到city内部的最前面
+            $("<li id='sd'>山东</li>").prependTo($("#city"));
+            //或者
+            //$("#city").prepend($("<li id='sd'>山东</li>"));
+
+            //创建li节点    并将其插入到指定元素之前
+            $("<li id='hn'>河南</li>").insertBefore($("#sd"));
+            //或者
+            //$("#sd").before($("<li id='hn'>河南</li>"));
+
+            //创建li节点    并将其插入到指定元素之后
+            $("<li id='hb'>河北</li>").insertAfter($("#sd"));
+            //或者
+            //$("#sd").after($("<li id='hb'>河北</li>"));
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+<p>你最喜欢那个城市？</p>
+<ul id="city">
+    <li id="bj" name="beijing">北京</li>
+    <li>天津</li>
+    <li>上海</li>
+</ul>
+name:<input type="text" name="username" value="chenyi">
+</html>

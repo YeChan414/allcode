@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建一个创建对象函数，将所要创建对象的属性作为形参传入即可
+        function createObject(name,sex,age){
+            var obj = new Object();
+            obj.name=name;
+            obj.sex=sex;
+            obj.age=age;
+            obj.sayName=function(){
+                document.write(obj.name+"</br>");
+            }  
+            return obj;
+        }
+        var obj1=createObject("孙悟空","男",18);
+        var obj2=createObject("猪八戒","男",18);
+        var obj3=createObject("沙和尚","男",18);
+
+        obj1.sayName();
+        obj2.sayName();
+        obj3.sayName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

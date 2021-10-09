@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        /* 滚轮向下滚box变长，向上滚变短 */
+        window.onload=function(){
+            var box = document.getElementById("box");
+            box.onmousewheel=function(e){
+                e = e || window.e;
+                /* 其他浏览器是wheelDelta 向上是正，火狐是detail 向下是正*/
+                if (e.wheelDelta > 0 || e.detail < 0)
+                {
+                    box.style.height = box.clientHeight - 50 + "px";
+                }
+                else box.style.height = box.clientHeight + 50 + "px";
+            }
+            /*如果浏览器有滚动条，滚动条也会跟随滚动，所以*/
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

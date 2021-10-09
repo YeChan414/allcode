@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钟表</title>
+    <style>
+        .clock{
+            width:600px;
+            height:600px;
+            border:black 10px solid;
+            border-radius: 50%;
+            margin:10px auto;
+            position:relative;
+        }
+        .clock > div{
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            margin:auto;
+        }
+        .hour-wrapper{
+            width:60%;
+            height:60%;
+            position:absolute;
+            animation:clock 216000s infinite linear ;
+        }
+        .hour{
+            width:6px;
+            height:50%;
+            margin:0 auto;
+            background-color: black;
+        }
+        .min-wrapper{
+            width:80%;
+            height:80%;
+            position:absolute;
+            animation: clock 3600s infinite;
+        }
+        .min{
+            width:4px;
+            height:50%;
+            margin:0 auto;
+            background-color: black;
+        }
+        .sec-wrapper{
+            width:93%;
+            height:93%;
+            position:absolute;
+            animation:clock 60s infinite steps(60) ;
+        }
+        .sec{
+            width:3px;
+            height:50%;
+            margin:0 auto;
+            background-color: red;
+        }
+
+        @keyframes clock{
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <!--设置时针容器-->
+            <div class="hour-wrapper">
+                <!--设置时针-->
+                    <div class="hour"></div>
+            </div>
+        <!--设置分针容器-->
+            <div class="min-wrapper">
+                <!--设置分针-->
+                    <div class="min"></div>
+            </div>
+        <!--设置秒针容器-->
+            <div class="sec-wrapper">
+                <!--设置秒针-->
+                    <div class="sec"></div>
+            </div>
+    </div>
+</body>
+</html>

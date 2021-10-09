@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        块元素
+            -块元素一个占一行
+            -默认宽度是父元素的全部
+            -默认高度是内容的高度
+        */
+        .box1
+        {
+            background-color: #bfa;
+            width: 100px;
+        }
+        .box2
+        {
+            background-color: #bfa;
+            width:100px;
+        }
+        /*
+        行内元素
+            -行内元素只占自身大小
+            -行内元素在页面中从左往右排列，若一行写不下则会移动到第二行
+            -默认高度和默认宽度都是内容的宽度和高度
+        */
+        span
+        {
+            background-color: slateblue;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">我是box1</div>
+    <div class="box2">我是box2</div>
+
+    <span>我是span</span>
+    <span>我是span</span>
+    <span>我是span</span>
+    <span>我是span</span>
+    <span>我是span</span>
+
+</body>
+</html>

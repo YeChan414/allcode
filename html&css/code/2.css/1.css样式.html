@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 
+         第二种样式：将样式写到head里面
+      -->
+    <style>
+        p
+        {
+            color:hotpink;
+            font-size: 20px;
+        }
+
+        h1
+        {
+            color:lightslategray;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        第一种样式：行内样式,必须用分号结束
+     -->
+     <p style="color:red;font-size:20px;">落霞与孤鹜齐飞</p>
+     <p style="color:blue;font-size:20px;">秋水共长天一色</p>
+
+     <!-- 第二种样式应用到的p -->
+     <p>落霞与孤鹜齐飞</p>
+     <p>秋水共长天一色</p>
+
+     <!-- 第二种样式应用到的h1 -->
+     <h1>落霞与孤鹜齐飞</h1>
+    <h1>秋水共长天一色</h1>
+
+     <!-- 
+         第三种样式：引入一个css文件来改变样式 
+         要用link来引入    
+     -->
+    <link rel="stylesheet" href="./样式.css">
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*构造函数和普通函数的区别：
+            1.构造函数首字母大写
+            2.构造函数在调用时要在前面加一个new
+        */
+        function Person(name,sex,age){
+            this.name=name;
+            this.sex=sex;
+            this.age=age;
+            this.sayName=fun;  //将方法改成调用函数，这样不用每创建一个对象就执行一次sayName()，而是直接调用fun()
+        }
+        function fun(){
+            document.write(this.name+"</br>");
+        }
+        var per = new Person("蜘蛛精","女",18);
+        per.sayName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

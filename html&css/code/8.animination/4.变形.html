@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变形</title>
+    <style>
+        html{
+            perspective: 800px;  /* 设置网页的z轴距离 */
+        }
+        body{
+            background-color: rgb(234, 234, 234);
+        }
+        .box1{
+            width:100px;
+            height:100px;
+            background-color: blueviolet;
+            /* transform用来设置元素的变形效果
+                -平移
+                    translateX()  X平移
+                    translateY()  Y平移
+                    translateZ()  Z平移 */
+            transform:translateX(100px);
+        }
+        .box2{
+            width:200px;
+            height:230px;
+            margin:0 auto;
+            background-color: white;
+            transition: all .5s;
+        }
+        .box2:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+        }
+        .box3{
+            width:100px;
+            height:100px;
+            position:absolute;
+            left:120px;
+            top:500px;
+            background-color: royalblue;
+            transition: all 2s;
+        }
+        body:hover .box3{
+            transform: translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <!-- 用box2做卡片 -->
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

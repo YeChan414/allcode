@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin:50px auto;
+        }
+        #formDiv{
+            width:500px;
+            height:500px;
+            margin:50px auto;
+        }
+    </style>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        
+       $(function(){
+           
+            function del(aNoe){
+                    //获取当前节点的父节点的父节点，即a的td的tr 
+                    var $tr = $(aNoe).parent().parent();
+                    //获取姓名
+                    var name = $tr.find("td:first").text();
+                    name = $.trim(name);  //去除前后空格
+                    //弹出提示
+                    var flag = confirm("确认删除"+name+"吗？");
+                    if(flag){
+                        //删除tr
+                        $tr.remove();
+                    }
+            }
+
+                //获取所有超链接,为每一个超链接添加一个删除响应
+            $("#employeeTable a").click(function(){
+                return del(this);
+            })
+
+            //为提交按钮绑定一个单击响应
+            $("#addEmpButton").click(function(){
+                $("<tr></tr>").append("<td>" + $("#empName").val() + "</td>")
+                            .append("<td>" + $("#email").val() + "</td>")
+                            .append("<td>" + $("#salary").val() + "</td>")
+                            .append("<td><a href='javascript:;'>Delete</a></td>")
+                            .appendTo("#employeeTable tbody")
+                            .find("a").click(function(){
+                                return del(this);
+                            });
+                            
+            })
+       })
+        
+    </script>
+</head>
+<body>
+    <table id ="employeeTable" border="1 solid #ccc" cellspacing="0">
+        <tbody>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>123456@qq.com</td>
+            <td>12000</td>
+            <td><a href="javascript:;">Delete</a></td>
+        </tr>
+        <tr>
+            <td>Jerry</td>
+            <td>123456@qq.com</td>
+            <td>12000</td>
+            <td><a href="javascript:;">Delete</a></td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>123456@qq.com</td>
+            <td>12000</td>
+            <td><a href="javascript:;">Delete</a></td>
+        </tr>
+    </tbody>
+    </table>
+    <div id="formDiv">
+        <h4>添加新员工</h4>
+        <table>
+            <tr>
+                <td class="word">name:</td>
+                <td class="inp">
+                    <input type="text" name="empName" id="empName"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="word">email:</td>
+                <td class="inp">
+                    <input type="text" name="email" id="email"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="word">salary:</td>
+                <td class="inp">
+                    <input type="text" name="salary" id="salary"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button id="addEmpButton" value="abc">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

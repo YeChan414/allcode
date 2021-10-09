@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景练习</title>
+    <style>
+        .beijing{
+            margin:100px auto;
+        }
+        a:link{
+            /* 将a转换成块元素，才可设置大小等 */
+            display:block;
+            width:93px;
+            height:29px;
+            background-image: url("./img/2/link.png");
+        }
+        a:hover{
+            background-image: url("./img/2/hover.png");
+        }
+        a:active{
+            background-image: url("./img/2/active.png");
+        }
+    </style>
+</head>
+<body>
+    <a class="beijing" href="javascript:;"></a>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width:100px;
+            height:100px;
+            background-color: red;
+        }
+        /*
+        后来加的
+        .b1{
+            width:100px;
+            height:100px;
+            background-color: red;
+        }
+        .b2{
+            width:200px;
+            height:200px;
+            background-color: yellow;
+        }*/
+    </style>
+    <script>
+        /*通过点击按钮来改变box的样式*/
+        //获取按钮
+        window.onload=function(){
+        var btn01 = document.getElementById("btn01");
+        var box1 = document.getElementById("box1");
+        //设置鼠标点击按钮的响应
+        btn01.onclick=function(){
+            /*js中改变css的语法： 
+                元素.style.样式名 = "样式值";
+            改的都是内联样式，因为内联样式优先级比较高
+            */
+            box1.style.width="300px";
+            box1.style.height="300px";
+            /*如果样式名中有-的，将-去掉，改为驼峰命名*/
+            box1.style.backgroundColor="yellow";
+
+            //或者直接
+            //box1.className="b2";
+        }
+
+        /*点击按钮读取样式*/
+        var btn02 = document.getElementById("btn02");
+        btn02.onclick=function(){
+            alert(box1.style.width);   //注：读取到的是内联样式，不能读取样式表中的样式
+        }
+    }
+    </script>
+</head>
+<body>
+    <button id="btn01">点我一下</button>
+    <button id="btn02">点我一下</button>
+</br><br>
+    <div id="box1" class="b1"></div>
+</body>
+</html>

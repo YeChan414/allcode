@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航条练习</title>
+    <style>
+        .nav{
+            width:1205px;
+            height:48px;
+            background-color: #e8e7e3;
+            margin:100px auto;
+            list-style: none;
+            padding:0px;
+        }
+        .nav li{
+            float: left;
+            /* 将文字在父元素中垂直居中 */
+            line-height: 48px;
+        }
+        .nav a{
+            /* 将a转换为块元素，让超链接以外的部分也可以点 */
+            display:block;
+            text-decoration: none;
+            color: #777;
+            font-size:18px;
+            padding:0px 39px;
+        }
+        .nav a:hover{
+            /* 设置超链接浮动颜色 */
+            background-color: #3f3f3f;
+            /* 设置超链接浮动字体颜色 */
+            color:#e8e7e3;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <a href="">HTML/CSS</a>
+        </li>
+        <li>
+            <a href="">Browser Side</a>
+        </li>
+        <li>
+            <a href="">Server Side</a>
+        </li>
+        <li>
+            <a href="">Programming</a>
+        </li>
+        <li>
+            <a href="">XML</a>
+        </li>
+        <li>
+            <a href="">Web Building</a>
+        </li>
+        <li>
+            <a href="">Reference</a>
+        </li>
+    </ul>
+</body>
+</html>

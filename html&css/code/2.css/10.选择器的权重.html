@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器的权重</title>
+    <style>
+        /*
+        样式冲突：当通过不同的选择器选中相同的元素，并且为该元素设置不同样式时，会发生样式冲突
+        
+        当发生样式冲突时，由样式选择器的权重来决定使用哪个样式
+        
+        选择器权重： 内联样式         1000
+                    id选择器         100
+                    类和伪类选择器    10
+                    元素选择器        1
+        
+        如果是复合选择器，则要将权重相加，但是并集选择器是单独计算的*/
+    /*权重为10*/
+    .red
+    {
+        background-color: red;
+    }
+    /*权重为100*/
+    #blue
+    {
+        background-color: blue;
+    }
+    /*交集选择器，权重为1+100*/
+    p#blue
+    {
+        background-color: orange;
+    }
+    /*并集选择器，权重各自算各自的*/
+    p,.red,#blue
+    {
+        font-size: 50px;
+    }
+    </style>
+</head>
+<body>
+    <p id="blue" class="red">落霞与孤鹜齐飞</p>
+    <p id="blue">秋水共长天一色</p>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <style>
+        .test{
+            width:500px;
+            height:500px;
+            margin:50px auto;
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(function(){
+            //1.点击段落显示信息
+            $("p").click(function(){
+                alert($(this).text());
+                //或者 alert(this.firstChild.nodeValue);
+
+                //text()方法传入参数之后就可以在原有的基础上添加文字
+                $(this).text("嘻嘻"+$(this).text());
+            })
+
+            //2.实现第一个table隔行变色
+            $("table:first tr:odd").css("background","#bfa");
+
+            //3.实现选中个数的反馈
+            $("button").click(function(){
+                alert($(":checkbox:checked").length);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="test">
+    <p>段落1</p>
+    <p>段落2</p>
+    <p>段落3</p>
+    <table>
+        <tr>
+            <td>第一行</td><td>第一行</td>
+        </tr>
+        <tr>
+            <td>第二行</td><td>第二行</td>
+        </tr>
+        <tr>
+            <td>第三行</td><td>第三行</td>
+        </tr>
+        <tr>
+            <td>第四行</td><td>第四行</td>
+        </tr>
+        <tr>
+            <td>第五行</td><td>第五行</td>
+        </tr>
+        <tr>
+            <td>第六行</td><td>第六行</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>第一行</td><td>第一行</td>
+        </tr>
+        <tr>
+            <td>第二行</td><td>第二行</td>
+        </tr>
+        <tr>
+            <td>第三行</td><td>第三行</td>
+        </tr>
+        <tr>
+            <td>第四行</td><td>第四行</td>
+        </tr>
+        <tr>
+            <td>第五行</td><td>第五行</td>
+        </tr>
+        <tr>
+            <td>第六行</td><td>第六行</td>
+        </tr>
+    </table>
+    <input type="checkbox" name="test"/>
+    <input type="checkbox" name="test"/>
+    <input type="checkbox" name="test"/>
+    <input type="checkbox" name="test"/>
+    <input type="checkbox" name="test"/>
+    <input type="checkbox" name="test"/>
+    <button>您选中的个数</button>
+</div>
+</body>
+</html>

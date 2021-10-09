@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            从键盘上输入小明的成绩
+            如果是100，则奖励一辆宝马
+            如果为80~99，奖励一台iphone
+            如果为60~80，奖励一本参考书
+            其他的，什么奖励都没有
+        */
+
+        /*prompt()函数会出现一个提示框并且出现一个文本框用于键入
+            可以用一个变量来接收键入的值*/
+            var score=prompt("请输入小明的期末成绩：");
+            if(score==100)
+                alert("奖励你一辆宝马");
+            else if(score>=80&&score<=99)
+                alert("奖励你一台iphone");
+            else if(score>=60&&score<80)
+                alert("奖励你一本参考书");
+            else alert("你没有奖励");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

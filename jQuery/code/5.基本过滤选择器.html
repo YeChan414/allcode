@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            float: left;
+            margin-right:5px;
+        }
+        #one{
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        #one .mini{
+            width:50px;
+            height:50px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        #two{
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        #two .mini{
+            width:65px;
+            height:65px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        #three{
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        #three .mini,.mini~div{
+            width:65px;
+            height:65px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        span{
+            display:inline-block;
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+    </style>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            //选择id为btn1的元素，绑定单击事件
+            $("#btn1").click(function(){  
+                $("div:first").css("background","#bfa");
+            });
+
+            //选择id为btn2的元素，绑定单击事件
+            $("#btn2").click(function(){
+                $("div:last").css("background","#bfa");
+            });
+
+            //选择id为btn3的元素，绑定单击事件
+            $("#btn3").click(function(){
+                $("div:not(.one)").css("background","#bfa");
+            });
+
+            //选择id为btn4的元素，绑定单击事件
+            $("#btn4").click(function(){
+                $("div:even").css("background","#bfa");
+            });
+
+            //选择id为btn5的元素，绑定单击事件
+            $("#btn5").click(function(){
+                $("div:odd").css("background","#bfa");
+            });
+
+             //选择id为btn6的元素，绑定单击事件
+             $("#btn6").click(function(){
+                $("div:gt(3)").css("background","#bfa");
+            });
+
+             //选择id为btn7的元素，绑定单击事件
+             $("#btn7").click(function(){
+                //选择id为two的元素前面的所有div兄弟
+                $("div:eq(3)").css("background","#bfa");
+            });
+
+            $("#btn8").click(function(){
+                //选择id为two的元素前面的所有div兄弟
+                $("div:lt(3)").css("background","#bfa");
+            });
+
+            $("#btn9").click(function(){
+                //选择id为two的元素前面的所有div兄弟
+                $(":header").css("background","#bfa");
+            });
+
+            $("#btn10").click(function(){
+                //选择id为two的元素前面的所有div兄弟
+                $("#two").nextAll("span:first").css("background","#bfa");
+            });
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="选择第一个div元素" id="btn1"/>
+    <input type="button" value="选择最后一个div元素" id="btn2"/>
+    <input type="button" value="选择class不为one的所有div元素" id="btn3"/>
+    <input type="button" value="选择索引值为偶数的div元素" id="btn4"/>
+    <input type="button" value="选择索引值为奇数的div元素" id="btn5"/>
+    <input type="button" value="选择索引值大于3的div元素" id="btn6"/>
+    <input type="button" value="选择索引值等于3的div元素" id="btn7"/>
+    <input type="button" value="选择索引值小于3的div元素" id="btn8"/>
+    <input type="button" value="选择所有的标题元素" id="btn9"/>
+    <input type="button" value="选择id为two的下一个span元素" id="btn10"/>
+    <br><br>
+    <h3>基本过滤选择器</h3>
+    <div id="one" class="one">id为one,class为one的div<br><br>
+        <div class="mini">class为mini</div>
+    </div>
+    <div id="two" class="one" title="test">id为two,class为one,title为test的div<br><br>
+        <div class="mini" title="other">class为mini,title为other</div>
+        <div class="mini" title="test">class为mini,title为test</div>
+    </div>
+    <div id="three">
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="1"></div>
+    </div>
+    <div id="three">
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini" title="test">class为mini,title为test</div>
+    </div>
+    <span>
+        span元素
+    </span>
+    <span>
+        -span元素-
+    </span>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本的样式</title>
+    <style>
+        .div1{
+            font-size:50px;
+            /* text-decoration设置文本修饰 
+                可选值：
+                    none 什么都没有
+                    underline 下划线
+                    line-through 删除线
+                    overline 上划线*/
+            text-decoration: overline solid blueviolet;
+        }
+        .div2{
+            font-size:30px;
+            width:200px;
+            /* white-space设置网页如何去处理空白
+                可选值：
+                    normal 正常（默认）
+                    nowrap 不换行
+                    pre 按照在编译器中编写的样式进行设置 */
+            white-space: nowrap;
+            overflow:hidden;  /* 设置隐藏超出200px的部分 */
+            text-overflow: ellipsis;  /* 设置超出部分用...显示 */
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">今天天气真不错</div>
+    <div class="div2">jintiantianqizhenbucuojintiantianqizhenbucuojintiantianqizhenbucuojintiantianqizhenbucuo
+        jintiantianqizhenbucuojintiantianqizhenbucuojintiantianqizhenbucuojintiantianqizhenbucuo
+        jintiantianqizhenbucuojintiantianqizhenbucuojintiantianqizhenbucuojintiantianqizhenbucuo</div>
+</body>
+</html>

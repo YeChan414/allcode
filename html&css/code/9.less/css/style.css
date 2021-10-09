@@ -1,0 +1,8 @@
+body {
+  width: 100px;
+  height: 100px;
+  /* less中可以将子元素写在父元素里面 */
+}
+body div {
+  width: 50px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建数组
+        var arr=new Array();
+        //给数组赋值，用数组名[下标]=值
+        arr[0]=1;
+        arr[1]=2;
+
+        document.write(arr[0]+","+arr[1]);
+        //length可以显示数组长度
+        document.write("</br>"+arr.length);
+        //给数组末尾添加元素
+        arr[arr.length]=3;
+        document.write("</br>"+arr[2]);
+
+        //使用构造函数创建数组时，也可以同时添加元素，将要添加的元素作为形参传入
+        var arr1= new Array(1,2,3);
+        document.write("</br>"+arr[0]+","+arr[1]+","+arr[2]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

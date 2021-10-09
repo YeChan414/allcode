@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位</title>
+    <style>
+
+        /* 绝对定位
+            当元素的position设置为absolute时，则开启了元素的绝对定位
+            绝对定位元素相对于包含块进行定位
+            
+            包含块
+                包含块就是离当前元素最近的祖先块元素
+                
+            绝对定位的包含块
+                离当前元素最近的开启了定位的祖先块元素
+                 */
+        .box1
+        {
+            width:300px;
+            height:300px;
+            background-color: blueviolet;
+            /* box1是父元素，box3是子元素，往往给父元素开启相对定位*/
+            position:relative;
+            left:0;
+            top:0;
+        }
+        .box2
+        {
+            width:200px;
+            height:200px;
+            background-color:chartreuse;
+        }
+        .box3
+        {
+            width:100px;
+            height:100px;
+            background-color:cornflowerblue;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 刚开始是box1包含box2包含box3
+            当box1开启绝对定位以后，box3就会把box1当作相对位置
+        如果都没设置祖先，那么html是祖先-->
+    <div class="box1">1
+        <div class="box2">2
+            <div class="box3">3</div>
+        </div>
+    </div>
+</body>
+</html>

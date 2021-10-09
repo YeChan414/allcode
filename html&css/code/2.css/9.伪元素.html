@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style>
+        /*
+        伪元素：页面中并不真实存在的元素
+        用法：::开头
+            ::first-letter - 第一个字母
+            ::first-line - 第一行
+            ::selection - 选中的内容
+            ::before - 元素的开始
+            ::after - 元素的最后
+                before和after要结合content使用
+        */
+        p::first-letter
+        {
+            color:sandybrown;
+            font-size: 30px;
+        }
+        p::first-line
+        {
+            color:springgreen;
+        }
+        p::selection
+        {
+            font-size: 50px;
+            background-color: steelblue;
+            color:red;
+        }
+        p::after
+        {
+            content: 'aaa';
+        }
+        p::before
+        {
+            content:'bbb';
+        }
+    </style>
+</head>
+<body>
+    <p>hhh今天天气真好，我学习了css,
+    落霞与孤鹜齐飞，秋水共长天一色</p>
+</body>
+</html>

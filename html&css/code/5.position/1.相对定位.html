@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对位置</title>
+    <style>
+        .box1,.box2,.box3
+        {
+            width:200px;
+            height:200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+        }
+        .box1{
+            background-color: cornflowerblue;
+        }
+        .box2{
+            background-color:pink;
+            /* 定位position
+               可选值：static(默认值，不开启定位)
+                      relative
+                      absolute
+                      fixed
+                      sticky
+
+                相对定位
+                    当元素的position属性设置为relative后就会开启相对定位
+                    需要和offset配合使用
+                    1.相对定位是参照元素在文档流中的位置进行定位的
+                    2.相对定位不会使元素脱离文档流
+                    3.相对定位不会改变元素的性质，块还是块，行内还是行内
+
+                偏移量offset
+                    top
+                    bottom
+                    left
+                    right    
+            */
+        position:relative;
+        top:-200px;
+        left:200px;
+        }
+        .box3{
+            background-color:greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

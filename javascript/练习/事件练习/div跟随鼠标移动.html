@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width:100px;
+            height:100px;
+            background-color: red;
+            /*要移动就要开启绝对定位*/
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var box1 = document.getElementById("box1");
+            //此处鼠标移动要绑定在整个页面上
+            document.onmousemove=function(e){
+                event = event || window.event;
+                //获取滚动条的距离
+                var st = document.documentElement.scrollTop || document.body.scrollTop;
+                var left = e.clientX;
+                var top = e.clientY;
+                box1.style.left=left+st+"px";
+                box1.style.top=top+st+"px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+</html>

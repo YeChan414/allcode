@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,.box2{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: orange;
+            /*设置一个下外边距*/
+            margin-bottom: 100px;
+        }
+        .box2{
+            background-color: #bfa;
+            /*设置一个上外边距*/
+            margin-top: 100px;
+        }  
+        /*
+        外边距的重叠会发生在垂直方向上的布局
+        兄弟元素之间  --  取最大值（两个margin都是正值）或者相加（一正一负）或者绝对值最大的（两个都是负值）
+        父子元素之间 -- 相邻外边距，子元素会传递给父元素（上外边距），子元素外边距会使得子元素和父元素一起移动
+        */
+        .box3{
+            width:100px;
+            height:100px;
+            background-color: orchid;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"><div class="box3"></div></div>
+    <div class="box2"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <form action="target.html">
+        <!--文本框-->
+        <input type="text" name="username">
+        <br><br>
+        <!--密码框-->
+        <input type="password" name="password">
+        <br><br>
+        <!--单选框-->
+        <input type="radio" name="1" checked value="a">a
+        <input type="radio" name="1" value="b">b  <!--要想让两个按钮归为一组，那么name必须一样,
+                                                    可以用checked来设置默认选中，而且得指定按钮的值-->
+        <br><br>
+        <!--复选框-->    <!--name相同value不同-->
+        <input type="checkbox" name="2" value="a">a
+        <input type="checkbox" name="2" value="b">b
+        <input type="checkbox" name="2" value="c">c
+        <br><br>
+        <!--下拉列表框-->  <!--select里面要有option-->
+        <select name="3">
+            <option value="选项一">选项一</option>
+            <option value="选项二">选项二</option>
+            <option value="选项三">选项三</option>
+        </select>
+        <br><br>
+        <!--提交按钮-->
+        <input type="submit" value="注册">  <!--用value来给按钮设置文字-->
+        <br><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关键帧</title>
+    <style>
+        .outer{
+            width:50%;
+            height:600px;
+            margin:0 auto;
+            border-bottom: 10px black solid;
+            overflow:hidden;  /* 解决外边距重叠的问题 */
+        }
+        .box1{
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+            background-color: blueviolet;
+            animation: ball 2s infinite;
+        }
+
+        /* 创建关键帧 */
+        @keyframes ball {
+            from{
+                margin-top:0;
+                animation-timing-function: ease-in;
+            }
+            20%,60%{
+                margin-top:500px;
+                animation-timing-function: ease-in;
+            }
+            40%{
+                margin-top:150px;
+                animation-timing-function: ease-out;
+            }
+            80%{
+                margin-top:350px;
+                animation-timing-function: ease-out;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box1"></div>
+    </div>
+</body>
+</html>

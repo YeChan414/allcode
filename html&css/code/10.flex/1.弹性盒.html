@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        ul{
+            width:800px;
+            border:10px red solid;
+            /* 将ul设置为弹性容器 */
+            display:flex;
+            flex-direction: row;  /* 设置排列方式 */
+        }
+        li{
+            width:100px;
+            height:100px;
+            background-color: #bfa;
+            font-size: 50px;
+            line-height: 100px;
+            text-align: center;
+            /* 弹性元素的属性
+                flex-grow指定弹性元素的伸展系数
+                    当父元素有多余空间时，子元素如何伸展
+                flex-shrink指定弹性元素的收缩系数
+                    当父元素空间不足时，子元素如何收缩
+
+                都是值越大越伸展（收缩）
+                 */
+            flex-grow:1;  /* 可以单独为每个子元素设置 */
+        }
+        li:nth-child(2){
+            background-color: blueviolet;
+        }
+        li:nth-child(3){
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- flex是弹性盒，用来完成浮动操作，让元素跟随页面的大小改变
+         用display将某个元素设置为弹性容器
+         display:flex
+         display:inline-flex
+         
+         弹性容器的子元素是弹性元素
+         可以同时是弹性元素和弹性容器
+    -->
+    <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li></ul>
+</body>
+</html>

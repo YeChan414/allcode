@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            background-color: #bfa;
+            width:200px;
+            height:200px;
+        /*
+        如果子元素的高度超过了父元素的高度，那么可以通过overflow属性来
+        改变子元素的溢出处理
+        
+        可选值：visible，子元素会从父元素中溢出
+               hidden，子元素溢出部分会被截取，不会显示
+               scroll，生成两个滚动条来查看完整内容
+               auto，根据需要生成滚动条
+        */
+            overflow:scroll;
+        }
+        .box2{
+            background-color:orange;
+            width: 100px;
+            height:400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">如果子元素的高度超过了父元素的高度，那么可以通过overflow属性来
+            可选值：visible，子元素会从父元素中溢出
+                   hidden，子元素溢出部分会被截取，不会显示
+                   scroll，生成两个滚动条来查看完整内容
+                   auto，根据需要生成滚动条如果子元素的高度超过了父元素的高度，那么可以通过overflow属性来
+                   改变子元素的溢出处理
+                   可选值：visible，子元素会从父元素中溢出
+                          hidden，子元素溢出部分会被截取，不会显示
+                          scroll，生成两个滚动条来查看完整内容
+                          auto，根据需要生成滚动条</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="../../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            //测试jQuery样式相关方法
+
+            //1.hasClass():某元素是否有指定的样式
+            alert($("div").hasClass("cy"));
+
+            //2.removeClass():移除样式
+            $("div").removeClass("cy");
+
+            //3.addClass():添加样式
+            $("div").addClass("cy");
+
+            //4.toggleClass():切换样式，有就去除，没有就加上
+            $("#btn").click(function(){
+                $("div").toggleClass("cy");
+            })
+
+            //5.opacity属性:获取和设置透明度
+            alert("透明度是："+$("div").css("opacity"));
+            $("div").css("opacity",0.5);
+        })
+    </script>
+</head>
+<body>
+    <div class="cy">
+        <ul>
+            <li>你好</li>
+            <li>你好</li>
+            <li>你好</li>
+            <li>你好</li>
+            <li>你好</li>
+            <li>你好</li>
+            <li>你好</li>
+            <li>你好</li>
+        </ul>
+    </div>
+    <button id="btn">切换样式</button>
+</body>
+</html>

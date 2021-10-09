@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            margin: 50px auto;
+            width:300px;
+            height:100px;
+            border:black 1px solid;
+        }
+        #box2{
+            margin:0px auto;
+            width:300px;
+            height:50px;
+            border: black 1px solid;
+        }
+    </style>
+    <script>
+        /*鼠标在第一个div里面移动，第二个div显示坐标*/
+        window.onload=function(){
+            var box1 = document.getElementById("box1");
+            var box2 = document.getElementById("box2");
+            //事件：鼠标移动
+            box1.onmousemove=function(event){
+                //设置IE8兼容
+                event = event || window.event;
+                var x = event.clientX;
+                var y = event.clientY;
+                box2.innerHTML="x="+x+",y="+y;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+    </br>
+    <div id="box2"></div>
+</body>
+</html>

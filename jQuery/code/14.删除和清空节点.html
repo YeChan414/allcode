@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            //点击city下的li之后删除对应的li节点
+            $("#city li").click(function(){
+                $(this).remove();
+            })
+
+            //点击game下的任意li，将清空game下的所有li节点
+            $("#game li").click(function(){
+                alert("要清空了");
+                $("#game").empty();
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+<p>你最喜欢那个城市？</p>
+<ul id="city">
+    <li >北京</li>
+    <li>天津</li>
+    <li id="sh">上海</li>
+</ul>
+<ul id="game">
+    <li>红警</li>
+    <li>飞车</li>
+    <li id="wzry">王者荣耀</li>
+</ul>
+<form action="">
+    <input type="radio" name="type" value="city"/>城市
+    <input type="radio" name="type" value="game"/>游戏
+    <br><br>
+    name:&nbsp;<input type="text" name="name">
+    <input type="submit" name="submit" id="submit">
+</form>
+
+</html>

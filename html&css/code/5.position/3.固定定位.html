@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定定位</title>
+    <style>
+        body{
+            height:2000px;
+        }
+        .box1,.box2,.box3
+        {
+            width:200px;
+            height:200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+        }
+        .box1{
+            background-color: cornflowerblue;
+        }
+        .box2{
+            background-color:pink;
+            /* 固定定位就是相对于视口的定位，用了fixed之后，不管导航条怎么滑动，都固定在视口的同一位置 */
+        position:fixed;
+        top:0px;
+        left:0px;
+        }
+        .box3{
+            background-color:greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

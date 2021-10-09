@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平渐变</title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            /* 设置水平渐变用background-image 
+                线性渐变linear-gradient()
+            */
+                background-image: linear-gradient(to bottom,red,yellow);
+            /* 里面的参数第一个表示方向
+                可选值：to left
+                        to right . . .
+                也可以用角度 deg  例如：180deg就是180度
+                也可以用圈turn  例如.5turn就是旋转一圈*/
+
+            /* 也可以手动设置渐变的像素 
+                代表从哪个像素开始渐变*/
+                background-image: linear-gradient(red 20px,yellow 80px);
+
+            /* 平铺渐变
+                将指定像素外的进行渐变平铺 */
+                background-image: repeating-linear-gradient(red 20px,yellow 80px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

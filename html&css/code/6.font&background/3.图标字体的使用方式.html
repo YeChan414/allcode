@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图标字体的使用方式</title>
+    <link real="stylesheet" href="./fa/css/all.css">
+    <style>
+        li{
+            list-style: none;
+        }
+        /* 通过伪元素使用方法：
+            1.找到要使用的地方通过before或after选中
+            2.在content中设置字体的编码
+            3.设置字体样式 */
+        li::before{
+            content:'\f1b0';
+            font-family: 'Font Awesome 5 Brands';
+            font-weight: 400; 
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.通过类来使用-->
+        <i class="fa fa-bell" style="font-size: 80px;"></i>
+
+    <!-- 2.通过伪元素来使用 -->
+     <ul>
+            <li>昼赏微云夜观星</li>
+            <li>醒也思卿 寐也思卿</li>
+     </ul>
+
+    <!-- 3.通过实体来使用 -->
+        <i class="fas">&#f0f3;</i>
+</body>
+</html>

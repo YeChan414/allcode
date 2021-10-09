@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            创建一个原型对象，所有公共属性都包含在其中
+        */
+       function MyClass(){
+
+       }
+       //向MyClass的原型中添加属性a，使用prototype
+       MyClass.prototype.a=123;
+
+       var mc=new MyClass();
+       var mc2=new MyClass();
+       mc.a=1;
+
+       //当访问一个对象的属性或者方法时，会先在这个对象里面找，如果没有，再去原型对象中找
+       document.write(mc.a+"</br>");   //自己有，就直接调用
+       document.write(mc2.a);  //自己没有，调用原型对象的
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

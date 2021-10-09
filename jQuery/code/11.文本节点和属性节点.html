@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            //1.操作文本节点：使用text()方法
+            alert($("#bj").text());
+            $("#bj").text("beijing");
+
+            //2.操作属性节点：使用attr()方法
+            alert($(":text[name='username']").attr("value"));
+            //对value属性赋值
+            $(":text[name='username']").attr("value","YeChan");
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+<p>你最喜欢那个城市？</p>
+<ul id="city">
+    <li id="bj" name="beijing">北京</li>
+    <li>天津</li>
+    <li>上海</li>
+</ul>
+name:<input type="text" name="username" value="chenyi">
+</html>

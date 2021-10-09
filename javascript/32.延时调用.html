@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //延时调用是经过一段时间后再运行函数，并且只运行一次
+        var tmo =setTimeout(function(){
+            alert("hello");
+        }, 3000);
+
+        clearTimeout(tmo);  //关闭延时调用
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

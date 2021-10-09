@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width:300px;
+            height:250px;
+            text-align: center;
+            margin:50px auto;
+            padding-top: 20px;
+            background-color: #bfa;
+        }
+    </style>
+    <script>
+        /*window.onload是在整个页面加载完之后才会执行的，这种写法可以将script标签写在head处*/
+        window.onload=function(){
+            /*获取按钮*/
+            var prev = document.getElementById("prev");  //根据元素id属性来获取
+            var next = document.getElementById("next");
+
+            /*获取图片标签*/
+            var img = document.getElementsByTagName("img")[0];  //根据元素标签名来获取
+
+            /*创建一个数组，用来存img的src*/
+            var imgArray = ["./img/1.jpg","./img/2.jpg","./img/3.jpg","./img/4.jpg","./img/5.jpg","./img/6.jpg"]
+
+            /*用一个变量来存当前图片的下表*/
+            var index=0;
+
+            /*给按钮添加方法*/
+            prev.onclick = function(){
+                /*切换图片就是修改img的src*/
+                index--;
+                if (index<0){
+                    alert("这已经是第一张了");
+                    index=0;
+                }
+                img.src=imgArray[index];
+            }
+
+            next.onclick = function(){
+                index++;
+                if (index>5){
+                alert("这已经是最后一张了");
+                index=5;}
+                img.src=imgArray[index];
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="outer">
+        <img src="./img/1.jpg" alt="">
+        </br>
+        <button id="prev">上一张</button>
+        <button id="next">下一张</button>
+    </div>
+</body>
+</html>

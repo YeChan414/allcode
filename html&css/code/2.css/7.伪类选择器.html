@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        /*
+        伪类：不存在的类，比如鼠标点击，第一个元素等
+        用法：1.第一个元素
+                ：first-child
+             2.最后一个元素
+                ：last-child
+             3.第n个元素
+                ：nth-child()
+                写数字就表示第几个
+                2n或even表示偶数
+                2n+1或者odd表示奇数
+                    特殊：如果写n就是从0到正无穷
+        */
+        ul>li:first-child
+        {
+            color:blueviolet;
+        }
+        ul>li:nth-child(even)
+        {
+            font-size: 30px;
+        }
+        ul>li:nth-child(odd)
+        {
+            font-size: 20px;
+        }
+
+        /*
+        :first-of-type
+        :last-of-type
+        :nth-of-type()
+        用法和前面相似，只不过会在同类型的里面进行排序
+        */
+
+        /*
+        :not(:nth-child())表示除去第几行
+        */
+        ul>li:not(:nth-child(3))
+        {
+            color:cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+        <li>第五个</li>
+    </ul>
+</body>
+</html>

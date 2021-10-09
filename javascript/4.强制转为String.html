@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+		//五个基本类型：Number、String、Boolean、Null、Undefined，再加上Object
+			/* 方法一：调用toString()方法
+					- 缺点是null和undefined没有toString()方法
+			   方法二：调用String()函数，将要转换的变量传入即可
+			*/
+		   
+		   //方法一
+		   var a = 123;
+		   a = a.toString();
+		   console.log(typeof a);
+		   console.log(a);
+		   
+		   //方法二
+		   var b = undefined;
+		   b = String(b);
+		   console.log(typeof b);
+		   console.log(b);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

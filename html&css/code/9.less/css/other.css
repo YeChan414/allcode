@@ -1,0 +1,45 @@
+.box1 {
+  width: 100px;
+  height: 100px;
+}
+.box1 > .box2 {
+  width: 100px;
+}
+.box1:hover {
+  color: cornflowerblue;
+}
+.p1,
+.p2 {
+  width: 100px;
+  height: 100px;
+}
+.p2 {
+  color: red;
+}
+.p4 {
+  width: 200px;
+  color: cornflowerblue;
+}
+.diaoyong {
+  width: 100px;
+  height: 200px;
+  background-color: cornflowerblue;
+  width: 300px;
+  height: 100px;
+  background-color: #bfa;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: #4000c0;
+  width: 100%;
+  height: 100%;
+}
+body:hover {
+  background-color: #2f008d;
+}
+.box9 {
+  width: 105px;
+}

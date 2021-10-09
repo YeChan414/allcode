@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+
+            //为节点加上点击响应
+            $("li").click(function(){
+                alert($(this).text());
+            })
+
+            //1.克隆sh节点,注意克隆节点时要改变新节点的id
+                //clone(true)让新克隆的节点继承原节点包含的事件
+            $("#sh").clone(true).attr("id","sh2").insertAfter($("#sh"));
+
+            //2.创建YeChan节点并用YeChan替换王者荣耀
+            $("<li>YeChan</li>").replaceAll($("#game #wzry"));
+
+            //3.创建陕西节点替换city的第二个子节点
+            $("#city li:eq(2)").replaceWith($("<li>陕西</li>"));
+
+            //4.互换北京和红警
+                //先克隆bj和hj
+                var $bj2 = $("#bj").clone(true);
+                var $hj2 = $("#hj").clone(true);
+
+                //用bj2替换hj
+                $bj2.replaceAll($("#hj"));
+                //用hj2替换bj
+                $hj2.replaceAll($("#bj"));
+                
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+<p>你最喜欢那个城市？</p>
+<ul id="city">
+    <li id="bj">北京</li>
+    <li>天津</li>
+    <li id="sh">上海</li>
+</ul>
+<ul id="game">
+    <li id="hj">红警</li>
+    <li>飞车</li>
+    <li id="wzry">王者荣耀</li>
+</ul>
+</html>

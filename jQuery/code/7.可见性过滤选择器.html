@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            float: left;
+            margin-right:5px;
+        }
+        #one{
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        #one .mini{
+            width:50px;
+            height:50px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        #two{
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        #two .mini{
+            width:65px;
+            height:65px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        #three{
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        #three .mini,.mini~div{
+            width:65px;
+            height:65px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        span{
+            display:inline-block;
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        div.hidden{
+            display: none;
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        .none{
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+        .hide{
+            display: none;
+            width:200px;
+            height:200px;
+            background-color: gray;
+            border: black 1px solid;
+        }
+    </style>
+    <script src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            //选择id为btn1的元素，绑定单击事件
+            $("#btn1").click(function(){  
+                $("div:visible").css("background","#bfa");
+            });
+
+            //选择id为btn2的元素，绑定单击事件
+            $("#btn2").click(function(){  //show(time)
+                $("div:hidden").show(2000).css("background","#bfa");
+            });
+
+            //选择id为btn3的元素，绑定单击事件
+            $("#btn3").click(function(){
+                alert($("input:hidden").val());
+            });
+            })
+
+    </script>
+</head>
+<body>
+    <input type="button" value="选择所有可见的div元素" id="btn1"/>
+    <input type="button" value="选择所有不可见的div元素" id="btn2"/>
+    <input type="button" value="选择所有不可见的input元素" id="btn3"/>
+    <br><br>
+    <div id="one" class="one">id为one,class为one的div<br><br>
+        <div class="mini">class为mini</div>
+    </div>
+    <div id="two" class="one" title="test">id为two,class为one,title为test的div<br><br>
+        <div class="mini" title="other">class为mini,title为other</div>
+        <div class="mini" title="test">class为mini,title为test</div>
+    </div>
+    <div id="three">
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="1"></div>
+    </div>
+    <div id="three">
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini" title="test">class为mini,title为test</div>
+    </div>
+    <div style="display: none;" class="none">style的display为none的div元素</div>
+    <div class="hide"></div>
+    <div style="display: none;">包含input的type为hidden的div
+        <input type="hidden" value="123456789" size="8"/>
+    </div>
+    <span>
+        span元素
+    </span>
+    <span>
+        -span元素-
+    </span>
+</body>
+</html>

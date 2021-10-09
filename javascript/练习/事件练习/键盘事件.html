@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            /* 键盘事件：onKeyDown、onKeyUp
+                     键盘事件一般都会绑定给一些可以获取焦点的对象或者document */
+            document.onkeydown=function(event){
+                event = event || window.event;
+                /* 通过keyCode可以获取案件的Unicode编码
+                除了keyCode还有altKey、ctrlKey、shiftKey来判断这三个键是否按下*/
+                
+                //判断y和ctrl是否同时按下，y的Unicode编码是89
+                if (event.keyCode==89 && event.ctrlKey)
+                    alert("ctrl和y都被按下了");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

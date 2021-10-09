@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体族</title>
+    <style>
+        p{
+        color:#bfa;
+        font-size:50px;
+
+        /* font-family 字体族 
+            可选值：serif  衬线字体
+                    sans-serif   非衬线字体
+                    monospace   等宽字体
+           font-family可以指定多个字体，当第一个字体无法生效时使用第二个，以此类推*/
+        font-family: serif;
+
+        /* font-face可以将服务器中的字体直接提供给用户 */
+        @font-face {
+            font-family: '字体名';   /* 指定字体的名字，可以随便起 */
+            src: url('字体地址');   /* 写出服务器的字体地址 */
+        }
+    }
+    </style>
+</head>
+<body>
+    <p>今天天气真不错，The weather is so beautiful today.</p>
+</body>
+</html>

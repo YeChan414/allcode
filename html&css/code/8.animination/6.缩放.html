@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩放</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            margin:100px auto;
+            background-color:cornflowerblue;
+            transition: all 2s;
+            transform-origin: 0 0;  /* 设置缩放原点，默认是center */
+        }
+        .box:hover{
+            /*scaleX()  水平缩放
+              scaleY()  竖直缩放
+              scaleZ()  z轴缩放基本用不到
+              括号中的数字代表缩放比例，缩小用.加数字*/
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

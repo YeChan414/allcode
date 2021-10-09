@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关系选择器</title>
+    <style>
+        /*父子选择器
+            语法：父 > 子
+            可以嵌套：父 > 子 > 孙
+        */
+            div > p{
+                color:skyblue;
+            }
+
+        /*祖先选择器
+            语法：祖先 后代
+            注意：父亲也是儿子的祖先，儿子也是父亲的后代
+        */
+            div span{
+                color: orange;
+            }
+        
+        /*兄弟选择器，从自己开始选择下一个兄弟
+            语法：自己 + 下一个兄弟
+        */
+            p + span{
+                font-size: 30px;
+            }
+        
+        /*兄弟选择器，从自己开始，选择后面所有兄弟
+            语法：自己 ~ 所后面有兄弟
+        */
+            p ~ span{
+                font-size: 10px;
+                color: orangered;
+            }
+    </style>
+</head>
+<body>
+    <div>我是div
+        <p>我是div里面的p
+            <span>我是div里面p里面的span</span>
+        </p>
+        <span>我是div里面的span</span>
+        <span>我是div里面的span</span>
+        <span>我是div里面的span</span>
+    </div>
+</body>
+</html>

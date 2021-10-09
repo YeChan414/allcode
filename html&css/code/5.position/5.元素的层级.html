@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的层级</title>
+    <style>
+
+        /* 默认情况下，下面的元素会盖住上面的元素 
+           通过设置z-index来调整元素的层级
+           z-index为整数，越大则层级越高
+           但是，祖先元素的层级再高，也盖不住后代元素，所以这里box3盖不住box4*/
+        .box1,.box2,.box3
+        {
+            width:200px;
+            height:200px;
+            font-size: 50px;
+        }
+        .box1{
+            z-index:1;
+            background-color: cornflowerblue;
+        }
+        .box2{
+            position:absolute;
+            top:50px;
+            left:50px;
+            background-color:pink;
+            z-index:2;
+        }
+        .box3{
+            position:absolute;
+            top:100px;
+            left:100px;
+            background-color:greenyellow;
+            z-index:3;
+        }
+        .box4{
+            width:100px;
+            height:100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3
+            <div class="box4">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景2</title>
+    <style>
+        .box{
+            width: 80px;
+            height: 100px;
+            background-color: #bfa;
+            background-image: url("./img/1.png");
+            background-repeat: no-repeat;
+            border:10px red double;
+
+            /* 设置背景范围background-clip
+                可选值：border (默认) 背景出现在边框里
+                        padding-box  背景只出现在内容区和内边距
+                        content-box  背景只出现在内容区*/
+            background-clip: content-box;
+            background-color:#b5f9f7;
+            
+
+            /* 设置背景偏移原点background-origin
+                可选值：border (默认) 背景从边框处开始偏移
+                        padding-box  背景从内边距处开始偏移
+                        content-box  背景从内容区开始偏移*/
+
+            /* 设置背景图片大小background-size
+                第一个值表示宽度，第二个值表示高度，如果只写一个，则另一个是auto
+                    cover 图片比例不变，将元素铺满
+                    contain 图片比例不变，将图片在元素中完整显示 */
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

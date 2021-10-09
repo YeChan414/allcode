@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            //获取img
+            var img = document.getElementById("img");
+            //获取按钮
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            //声明一个图片数组，存放图片路径
+            var imgArr = ["./img/1.jpg","./img/2.jpg","./img/3.jpg","./img/4.jpg","./img/5.jpg","./img/6.jpg"];
+            //声明下标
+            var index = 0;
+            //声明定时器
+            var timer;
+            //点击按钮开始播放图片
+            btn1.onclick=function(){
+                //每点击一次就会开启一个定时器，导致图片切换速度过快
+                //所以在开启一个定时器前，要关闭当前元素上的其他定时器
+                clearInterval(timer);
+                 //开启一个定时器
+                timer = setInterval(function(){
+                index++;
+                //超过数组长度回到第一个
+                index = index % imgArr.length;
+                img.src=imgArr[index];
+            }, 500);
+            }
+            btn2.onclick=function(){
+                clearInterval(timer);
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="./img/1.jpg" alt="" id="img">
+    </br>
+    <button id="btn1">开始</button>
+    <button id="btn2">停止</button>
+</body>
+</html>
