@@ -1,7 +1,7 @@
 //1.加载http模块
-var http = require("http");
+import { createServer } from "http";
 //2.创建一个web服务器
-var server = http.createServer();
+var server = createServer();
 //3.收到请求
 server.on("request",function(){
     console.log("收到了客户端的请求");
