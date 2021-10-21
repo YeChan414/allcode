@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text"><br>
+    <input type="button" value="设置数据" id="setData">
+    <input type="button" value="获取数据" id="getData">
+    <input type="button" value="清除数据" id="removeData">
+    <script>
+        document.querySelector("#setData").onclick=function(){
+            var text = document.querySelector("#text").value;
+            window.localStorage.setItem("text",text);
+        }
+        document.querySelector("#getData").onclick=function(){
+            var text = window.localStorage.getItem("text");
+            alert(text);
+        }
+        document.querySelector("#removeData").onclick=function(){
+            window.localStorage.removeItem("text");
+        }
+    </script>
+</body>
+</html>

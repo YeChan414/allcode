@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .content{
+            width:500px;
+            height:500px;
+            margin:10px auto;
+        }
+        .header{
+            width:250px;
+            height:125px;
+            background-color: rgb(11, 182, 11);
+            margin:10px auto;
+            border-radius: 125px 125px 0 0;
+            position:relative;
+        }
+        .header::before{
+            content:"";  /*一定要设置*/
+            width:20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            position: absolute;
+            left:70px;
+            bottom:40px;
+        }
+        .header::after{
+            content:"";  /*一定要设置*/
+            width:20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            position: absolute;
+            right:70px;
+            bottom:40px;
+        }
+        .body{
+            width:250px;
+            height:250px;
+            background-color: rgb(11, 182, 11);
+            border-radius: 0 0 20px 20px;
+            margin:0 auto;
+            position: relative;
+        }
+        .body::before,.body::after{
+            position: absolute;
+            content:"";
+            background-color: rgb(11, 182, 11);
+            width:30px;
+            height:180px;
+            border-radius: 10px;
+            top:20px;
+        }
+        .body::before{
+            left:-40px;
+        }
+        .body::after{
+            right:-40px;
+        }
+        .footer{
+            width:250px;
+            height:100px;
+            
+            position:relative;
+            margin:0 auto;
+        }
+        .footer::before,.footer::after{
+            position: absolute;
+            content:"";
+            background-color: rgb(11, 182, 11);
+            width:30px;
+            height:90px;
+            border-radius: 0 0 10px 10px;
+        }
+        .footer::before{
+            left:50px;
+        }.footer::after{
+            right:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="header"></div>
+        <div class="body"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

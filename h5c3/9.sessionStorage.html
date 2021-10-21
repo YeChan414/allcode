@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        sessionStorage的使用：存储数据到本页面，存储容量5mb左右
+        setItem(key,value)：存储数据，以键值对的方式存储
+        getItem(key)：获取数据，传入指定名称key来获取value值
+        removeItem(key)：删除数据，传入指定名称key来删除value
+        clear()：清空数据
+    -->
+    <input type="text" id="username"><br>
+    <input type="button" value="设置数据" id="setData">
+    <input type="button" value="获取数据" id="getData">
+    <input type="button" value="清除数据" id="removeData">
+    <script>
+        /*设置数据*/
+        document.querySelector("#setData").onclick=function(){
+            /*获取用户名*/
+            var name = document.querySelector("#username").value;
+            /*存储数据*/
+            window.sessionStorage.setItem("username",name);
+        }
+        /*获取数据*/
+        document.querySelector("#getData").onclick=function(){
+            /*获取用户名*/
+            var name = window.sessionStorage.getItem("username");
+            alert(name);
+        }
+        document.querySelector("#removeData").onclick=function(){
+            window.sessionStorage.removeItem("username");
+        }
+    </script>
+</body>
+</html>

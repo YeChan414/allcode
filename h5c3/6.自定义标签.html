@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        1.定义 以data-开头，后面至少有一个字符，名称全部小写，如果有多个单词用-连接
+    -->
+    <p data-my-name="YeChan">YeChan</p>
+    <!--
+        2.取值
+    -->
+    <script>
+        window.onload=function(){
+            var p = document.querySelector("p");
+            /*将data后面的单词使用驼峰命名法连接*/
+            var value = p.dataset["myName"];
+            console.log(value);
+        }
+    </script>
+</body>
+</html>
