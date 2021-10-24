@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pro = new Promise((resolved,rejected)=>{  //resolved表示成功，rejected表示失败
+            //执行异步操作
+            let res = {
+                name:'YeChan',
+                code:200,
+                data:"成功",
+                error:"失败"
+            }
+            if(res.code===200){
+                resolved(res.data);
+            }
+            else rejected(res.error);
+        })
+        pro.then((val)=>{   //通过then()返回，第一个参数是resolved的回调函数，第二个是可选的，是rejected的回调函数
+            console.log(val);
+        }),(err)=>{
+            console.log(err);
+        };  
+    </script>
+</body>
+</html>
