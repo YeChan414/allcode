@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!-- 遍历数组 -->
+        <input type="text" v-model='keyWord'>
+        <ul>
+            <li v-for="(p,index) in filpersons" :key="index">
+                {{p.name}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:'#root',
+            data:{
+                keyWord:'',
+                persons:[
+                    {name:'张三',age:18},
+                    {name:'李四',age:18},
+                    {name:'王五',age:18}
+                ],
+                filpersons:[
+                    
+                ]   //本例的目的是，从persons中找到关键词中含有的对象，然后存入filpersons，然后遍历时在filpersons中遍历
+            },
+            watch:{
+                keyWord:{
+                    immediate:true,   //让handler函数一开始就调用
+                    handler(val){
+                        this.filpersons = this.persons.filter((p)=>{   //filter函数用于过滤
+                            return p.name.indexOf(val) !== -1    //indexOf函数用于查找包不包含val,若不包含，返回-1
+                        })
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

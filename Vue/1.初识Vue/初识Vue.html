@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初识Vue</title>
+    <!-- 引入Vue -->
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 先要准备好一个容器 -->
+    <!-- 容器和实例只能是一一对应
+            容器中的代码成为Vue模板 -->
+    <div id="root">
+        <h1>Hello,{{name}}</h1>   <!--  Vue语法：{{表达式}}  -->
+    </div>
+    <script>
+        Vue.config.productionTip = false; //阻止Vue在启动时生成生产提示
+
+        /*创建Vue实例*/
+        new Vue({
+            el:'#root',   //用于绑定容器
+            data:{        //给容器中提供数据
+                name:'Vue'   
+            }
+        })  //需要传入参数，参数的类型是一个对象
+    </script>
+</body>
+</html>

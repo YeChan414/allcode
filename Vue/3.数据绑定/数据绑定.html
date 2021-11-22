@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="demo">
+        单向数据绑定：<input type="text" v-bind:value="name"><br>
+        双向数据绑定：<input type="text" v-model:value="name"><br>
+        <hr/>
+        <!-- 简写 -->
+        单向数据绑定：<input type="text" :value="name"><br>
+        双向数据绑定：<input type="text" v-model="name"><br>
+
+        <!--
+            1.单向绑定，数据只能从data流向页面，即修改data里面的内容会更改页面内容，但修改页面的内容不会更改data里面的内容
+            2.双向绑定，数据可以在data和页面之间互相流动
+            v-model:value可以简写为v-model，因为v-model默认就是收集value的，只能用于表单元素
+
+        -->
+    </div>
+    <script>
+        Vue.config.productionTip = false
+        new Vue({
+            el:'#demo',
+            data:{
+                name:'Vue'
+            }
+        })
+    </script>
+</body>
+</html>

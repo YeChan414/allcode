@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div class="root">
+        <app></app>
+    </div>
+    <script>
+        //因为school中要用到student，所以student得先写在前面
+        const student = Vue.extend({
+            template:`
+                <div>
+                    <h2>学生姓名：{{studentName}}</h2>
+                    <h2>学生年龄：{{age}}</h2>
+                </div>
+            `,
+            data(){
+                return {
+                    studentName:'YeChan',
+                    age:20
+                }
+            }
+        })
+        const school = Vue.extend({
+            template:`
+                <div>
+                    <h2>学校名称：{{schoolName}}</h2>
+                    <h2>学校地址：{{address}}</h2>
+                    <xuesheng></xuesheng>
+                </div>
+            `,  //在此处要把子组件写入
+            data(){
+                return {schoolName:'南昌大学',address:'南昌'}
+            },
+            //注册子组件
+            components:{
+                    xuesheng:student
+                }
+        })
+        const hello = Vue.extend({
+            template:`<div><h2>欢迎</h2></div>`,
+        })
+        //定义app组件
+        const app = Vue.extend({
+            template:`<div><hello></hello>
+        <xuexiao></xuexiao></div>`,
+            components:{
+                xuexiao:school,
+                hello:hello
+            }
+        })
+        new Vue({
+            el:'.root',
+            components:{
+                app:app
+            }
+        })
+
+    </script>
+</body>
+</html>

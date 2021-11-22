@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div class="root">
+        <h1 v-show="n === 1">c语言</h1>   <!-- v-show只是将样式隐藏掉，不会将DOM元素移除 -->
+        <h1 v-show="n === 2">c++</h1>       <!-- v-show适用于频繁切换的 -->
+        <h1 v-show="n === 3">java</h1>
+        <h2>当前的值是{{n}}</h2>
+        <button @click="n++">点我让n++</button>
+    </div>
+    <br>
+    <div class="demo">
+        <h1 v-if="n === 1">c语言</h1>   <!-- v-if将DOM元素直接移除 -->
+        <h1 v-else-if="n === 2">c++</h1>
+        <h1 v-else-if="n === 3">java</h1>
+        <h1 v-else>计算机语言</h1>
+        <h2>当前的值是{{n}}</h2>
+        <button @click="n++">点我让n++</button>
+    </div>    
+    <script>
+        new Vue({
+            el:'.root',
+            data:{
+                n:0
+            }
+        })
+        new Vue({
+            el:'.demo',
+            data:{
+                n:0
+            }
+        })
+    </script>
+</body>
+</html>

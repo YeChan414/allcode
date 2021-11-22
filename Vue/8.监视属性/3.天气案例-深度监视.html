@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div class="root">
+        <h2>今天天气很{{info}}</h2>
+        <button @click='changeWeather()'>点我更换天气</button>
+        <hr>
+        <h2>a的值是{{numbers.a}}</h2>
+        <button @click="numbers.a++">点我让a+1</button>
+        <hr>
+        <h2>b的值是{{numbers.b}}</h2>
+        <button @click="numbers.b++">点我让b+1</button>
+    </div>
+    <script>
+        new Vue({
+            el:'.root',
+            data:{
+                isHot:true,
+                numbers:{
+                    a:1,
+                    b:1
+                }
+            },
+            methods: {
+                changeWeather(){
+                    return this.isHot = !this.isHot
+                }
+            },
+            computed:{
+                info(){
+                    return this.isHot ? '炎热' : '凉爽'
+                }
+            },
+            //监视属性
+            watch:{
+                //要监视的对象
+                isHot:{
+                    immediate:true,  //初始化时让handler调用一下
+                    //监视方法
+                    handler(newValue,oldValue){
+                        console.log("isHot被修改了",newValue,oldValue)
+                    }
+                },
+                'numbers.a':{
+                    handler(){
+                        console.log("a被修改了")
+                    }
+                },
+                'numbers.b':{
+                    handler(){
+                        console.log("b被修改了")
+                    }
+                },
+                numbers:{
+                    deep:true,  //如果不开启，无论a和b怎么变，都不会说numbers变了，开启之后，无论a和b谁变，都会说numbers变了
+                    handler(){
+                        console.log("numbers被修改了")
+                    }
+                }
+            }
+        })
+
+        //或者可以用vm接收Vue然后利用vm.$watch('isHot',{})方法
+    </script>
+</body>
+</html>
